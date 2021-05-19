@@ -3,9 +3,6 @@ require('connexion_bdd.php'); //connexion au serveur de base de données
 // include('class/classlangue.php');
 
 
-// =========================
-// gestion des boutons
-// =========================
 
 
 ?>
@@ -44,11 +41,11 @@ require('connexion_bdd.php'); //connexion au serveur de base de données
 
 
                 <label>
-                    <u>
-                        <b>
-                            Choix de langue
-                        </b>
-                    </u>
+                <u>
+                    <b>
+                    Choix de langue
+                    </b>
+                </u>
                 </label>
 
             
@@ -59,7 +56,7 @@ require('connexion_bdd.php'); //connexion au serveur de base de données
 
                     echo '<u>';
                         echo '<p>';
-                        echo 'Remplir les champs ci-dessous:';
+                            echo 'Remplir les champs ci-dessous:';
                         echo '</p>';
                     echo '</u>';
 
@@ -69,12 +66,14 @@ require('connexion_bdd.php'); //connexion au serveur de base de données
                     $result = $connect_bdd->query($sql); //$result : execute la requete $sql
 
                     if ($result->num_rows > 0) {
-                        echo '<select name="selectLangue" >';
+                    echo '<select name="selectLangue" >';
 
-                        foreach ($result as $k => $v){
-                            echo"<option value=".$v["translate"].">".$v["name"]."</option>";
-                        }
-                        echo '</select>';
+                    foreach ($result as $k => $v){
+                        echo"<option value=".$v["translate"].">".$v["name"]."</option>";
+                    }
+
+                    
+                    echo '</select>';
                     }
                     echo'<p>';
 
