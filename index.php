@@ -1,6 +1,6 @@
 <?php
 require('connexion_bdd.php'); //connexion au serveur de base de données
-// include('class/classlangue.php');
+
 
 
 
@@ -25,7 +25,6 @@ require('connexion_bdd.php'); //connexion au serveur de base de données
     <!-- JS -->
     <script src="assets/bootstrap/js/popper.min.js"></script>
     <script src="assets/bootstrap/js/jquery-slim.min.js"></script>
-    <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
     <script src="assets/bootstrap/js/bootstrap.js"></script>
     <script src="assets/bootstrap/js/util.js"></script>
 </head>

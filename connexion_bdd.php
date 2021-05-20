@@ -7,11 +7,3 @@
 
     $connect_bdd = mysqli_connect($host , $username , $password, $db_name); //ce connecter à la base de données
 
-    // if ($connect_bdd->connect_error){
-    //         echo "échec de la connexion";
-    //     }
-    //     else {
-    //         echo "connexion réussi";
-    //     }
-        
-        
