@@ -1,8 +1,8 @@
 <?php
 require('connexion_bdd.php'); //connexion au serveur de base de données
-
-
-
+include('class_langue.php');
+$langue = new langue ();
+$res_langue = $langue->getlangue();
 
 
 ?>
@@ -50,7 +50,7 @@ require('connexion_bdd.php'); //connexion au serveur de base de données
             
                 <?php
 
-                // <!-- CREER UN LIVRE  -->
+                // <!-- CREER DES LANGUES  -->
                 echo '<form  method="POST" action="index.php">';
 
                     echo '<u>';
@@ -61,13 +61,10 @@ require('connexion_bdd.php'); //connexion au serveur de base de données
 
                     echo'<p>';
 
-                    $sql = "SELECT * from langue" ; //$sql : contient la requete sql 
-                    $result = $connect_bdd->query($sql); //$result : execute la requete $sql
-
-                    if ($result->num_rows > 0) {
+                    if ($res_langue->num_rows > 0) {
                     echo '<select name="selectLangue" >';
 
-                    foreach ($result as $k => $v){
+                    foreach ($res_langue as $k => $v){
                         echo"<option value=".$v["translate"].">".$v["name"]."</option>";
                     }
 
