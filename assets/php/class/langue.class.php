@@ -1,12 +1,6 @@
 <?php
 include __DIR__."./../connexion_bdd.php";
 
-    /**
-     * SELECT * from Livres
-     *
-     * @return $result_langue
-     */
-
     class langue{
 
         //Recuperer tout les langues
@@ -30,15 +24,15 @@ include __DIR__."./../connexion_bdd.php";
         public function updatelangue($new_name,$new_translate,$id_langue){
             global $connect_bdd;
 
-            $sql_update = "UPDATE `langue` SET `name`= '".$new_name."',`translate`= '".$new_translate."' WHERE id =".$id_langue;
-            $connect_bdd->query($sql_update);
+            $sql_update = "UPDATE `langue` SET `name`= '".$new_name."',`translate`= '".$new_translate."' WHERE id =".$id_langue; //$sql : contient la requete sql
+            $connect_bdd->query($sql_update);//$result : execute la requete $sql
 
         }
 
         //Créer une nouvelle langue
         public function createlangue($name,$translate){
             global $connect_bdd;
-            $sql = "INSERT INTO `langue`(`name`,`translate`) VALUES ('".$name."' , '".$translate."' )";
+            $sql = "INSERT INTO `langue`(`name`,`translate`) VALUES ('".$name."' , '".$translate."' )";//$sql : contient la requete sql
             $connect_bdd->query($sql); //$result : execute la requete $sql
         }
         

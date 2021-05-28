@@ -21,7 +21,11 @@
         <div class="row">
             <div class="col-md-6">
                 <?php
+                    // CONDITIONS \\
+                    // Afficher la liste des livres
+                    //si $res_listLivres contient au moins une données  
                     if ($res_langue->num_rows > 0){
+                        //faire ceci
                         
                         echo "<table>";
 
@@ -38,7 +42,7 @@
                             echo "</th>";
 
 
-                            foreach ( $res_langue as $valeur){
+                            foreach ( $res_langue as $valeur){ { //Boucle : Pour chaque resultat 
                                 if (($etat == "ouvrir") && ($id_langue == $valeur['id'])) {
                                     
                                     echo '<form action="index_admin.php" method="post">';
@@ -62,7 +66,8 @@
         
         
                                     // -------------------------------------------------------
-                                } else {
+                                } else {//sinon
+                                    //faire cela
         
                                     echo "<tr>";
         

@@ -52,7 +52,7 @@
 
                         echo'<p>';
 
-                            if ($res_langue->num_rows > 0) {
+                            if ($res_langue->num_rows > 0) {//Boucle : Pour chaque resultat 
                                 echo '<select name="selectLangue" >';
 
                                 foreach ($res_langue as $k => $v){
